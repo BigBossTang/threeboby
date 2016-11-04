@@ -1,0 +1,115 @@
+.bgAbout{
+    background: #2d2d2d;
+}
+
+#left{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 300px;
+    background: #ababab;
+    padding:10px;
+    margin: 0;
+    border-radius: 5px;
+    border-bottom: 4px solid;
+}
+#banner {
+    position: absolute;
+    top: 0;
+    background: black;
+    margin-top: 0px;
+    padding: 10px;
+    left: 330px;
+    top:50px;
+    width: 830px;
+    height: 400px;
+    text-align: center;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.imgbanner{
+    position:relative;
+    margin: 5px;
+    width: 240px;
+    height:160px;
+    transition: 0.3s ;
+}
+.imgbanner:hover{
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px 4px #4f4f4f;
+}
+
+#contain{
+    position: absolute;
+    top: 475px;
+    background: #ababab;
+    border: 1px solid black;
+    padding:10px;
+    left: 330px;
+    width: 830px;
+    border-radius: 5px;
+    border-bottom: 4px solid;
+}
+
+
+/*字体样式*/
+.titleLeft{
+    color: black;
+    font-family: "Adobe 黑体 Std R";
+    font-size: 2em;
+}
+.leftText{
+    color: #2d2d2d;
+    font-size: 15px;
+    line-height: 30px;
+    font-family: "Adobe 黑体 Std R";
+}
+.leftHref{
+    text-decoration: none;
+    color: #634271;
+}
+.hr{
+    height:1px;
+    border:none;
+    border-top:1px dashed black;
+}
+#bannerBottom{
+    position: absolute;
+    margin-bottom: 5px;
+    padding-top: 7px;
+    left:0;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    background: white;
+    color: black;
+    font-size: 25px;
+    font-family: "Adobe 黑体 Std R";
+    font-weight: bold;
+    opacity: 0.4;
+    text-align: center;
+    display: block;
+}
+#bigmain{
+    position: relative;
+    width: 1280px;
+    margin: 0 auto;
+}
+#bigImg{
+    position: absolute;
+    visibility:hidden;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 100;
+    top:50px;
+    left:185px;
+    width: 480px;
+    border: 2px solid #2d2d2d;
+    animation: bigger 1s linear;
+}
+@keyframes bigger {
+    0%{width: 0px ;height:0;}
+    50%{width:240px;height: 160px;}
+    100%{width:480px;}
+}

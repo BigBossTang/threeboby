@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/myStyle.css">
+    <title>三体世界</title>
+
+</head>
+
+<body class="bg" oncontextmenu="return false;" onselectstart="return false;">
+
+<script src="js/myScript.js" type="text/javascript"></script>
+<script src="js/jquery.rotate.min.js"></script>
+
+<div id=area class="area" >
+
+    <div id=img1 class="img1D"><img src="image/sun.png" class="img1"></div>
+    <div id=img2 class="img2D"><img src="image/sun1.png" class="img2"></div>
+    <div id=img3 class="img3D"><img src="image/sun2.png" class="img3"></div>
+    <div id="earth" class="earth" ></div><img id="img4" src="image/earth.png" class="img4"/>
+    <button type="button" class="button1" onclick="this.style.visibility='hidden';start();moveEarth();doTimer();contact();appear()"  >点击开始体验三体世界</button>
+</div>
+
+<div id="gameOver"><div id="black"><p id="overText" class="p1">三体世界中拥有三个太阳<br>
+    进行着不可描述的天体运动<br>您在本次体验中<br>顽强存活了
+    <span id="second"></span> 秒！<br>想了解更多请浏览本站其他网页</p>
+    <button type="button" class="button2" onclick="refresh();">重新开始</button></div></div>
+
+<ul id="mainMenu"><li id="logoThreebody" ><a href="#" class="href"> <img src="image/threebody1.png" id="logo"></a></li>
+    <li ><a href="about.html" class="li2"> 关于三体</a></li>
+    <li id="etoB" onmouseover="tips()" onmouseout="tips1()"><a href="eto.html" class="li">ETO</a> </li>
+    <li id="pdcB" onmouseover="tips2()" onmouseout="tip3()"><a href="pdc.html" class="li3">PDC</a> </li>
+    <li><a href="more.html"  class="li2"> 更多讨论</a></li></ul>
+<p id="doTime" class="p2">您已存活</p>
+<input type="text" id="time" class="time" value="0">
+
+<div id="statement"><span id="warning">WARNING!!!</span><p id="textState"><br>三体，是一个您不了解的外太空世界，在了解前请先做好心理及生理上的准备。
+    此网站内容可能会颠覆您的宇宙观、人生观，且存在黑暗、暴力内容。请符合下列条件之一者速速离开：未成年、有心脏病史、智力低于120、不爱洗脸。<br>
+    以上规则由Earth Three-body Organization和Planetary Defense Council联合制定，
+    若符合驱逐条件但继续浏览者，后果自负！<br><br>In English: This worldsite is dangerous!</p></div>
+<div id="eto" class="menuMent"><img src="image/threebody.jpg"><h1 class="menutip">地球三体组织（Earth Three-body Organization）</h1></div>
+<div id="pdc" class="menuMent">行星防御委员会（Planetary Defense Council）</h1></div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,317 @@
+.bg{
+    background:url(../image/space.png),no-repeat;
+    background-size:cover;
+    cursor:crosshair;
+}
+#menu{
+    position:fixed;
+    top:10%;
+    right:10px;
+    width: 80px;
+    height: 500px;
+    border: 2px solid #e5eecc;
+    background: #272727;
+    color: #ffffff;
+}
+#mainMenu{
+    position: fixed;
+    right: 20px;
+    top:50px;
+    padding:0;
+    margin: 0;
+    background: black;
+    text-align: center;
+    color: white;
+    font-family: 微软雅黑;
+    line-height: 30px;
+    opacity: 0.8;
+    border-radius:3px;
+}
+#mainMenu1{
+    position: absolute;
+    left:1185px;
+    top:50px;
+    padding:0;
+    margin: 0;
+    background: black;
+    text-align: center;
+    color: white;
+    font-family: 微软雅黑;
+    line-height: 30px;
+    opacity: 0.8;
+    border-radius:3px;
+}
+
+
+#statement{
+    margin: 0;
+    position: fixed;
+    top:5%;
+    left: 35%;
+    width: 30%;
+    background: black;
+    opacity: 0.8;
+    border: #c3c3c3 ridge;
+    text-align: center;
+    padding: 20px;
+    border-radius:5px;
+    z-index: -1;
+    animation:appear 2s linear;
+}
+@keyframes appear {
+    0% {opacity: 0}
+    100% {opacity: 0.8}
+}
+#warning{
+    font-size: 20px;
+    font-weight:bolder;
+    text-align: center;
+    background-color: red;
+    color:white;
+    padding:10px;
+    margin: 15px;
+}
+#textState{
+    color:white;
+    font-size: 15px;
+    text-align: left;}
+#textState1{
+    color:white;
+    font-size: 15px;
+    text-align: left;
+}
+
+li{
+    list-style: none;
+    text-decoration:none;
+}
+
+
+.button1{
+    position: relative;
+    cursor:crosshair;
+    top: 40%;
+    left: 48%;
+    z-index: 600;
+    border-radius:3px;
+}
+.img1D{
+    Z-INDEX: 5;
+    LEFT: 2px;
+    WIDTH: 59px;
+    POSITION: absolute;
+    TOP: 43px;
+    visibility: visible;
+
+}
+.img2D{
+    Z-INDEX: 5;
+    LEFT: 2px;
+    WIDTH: 100px;
+    POSITION: absolute;
+    TOP: 200px;
+    visibility: visible;
+}
+
+.img3D{
+    Z-INDEX: 5;
+    LEFT: 150px;
+    WIDTH: 100px;
+    POSITION: absolute;
+    TOP: 150px;
+    HEIGHT: 90px;
+    visibility: visible;
+}
+.img1{
+    width: 84px;
+    height: 84px;
+    border: 0px;
+    -webkit-animation:mymove1 3s linear infinite;
+}
+.img2{
+    width: 100px;
+    height: 100px;
+    border: 0px;
+    -webkit-animation:mymove2 4s linear infinite;
+}
+.img3{
+    width: 70px;
+    height: 70px;
+    border: 0px;
+    -webkit-animation:mymove3 4s linear infinite; /* Safari and Chrome */
+}
+@-webkit-keyframes mymove1 /* Safari and Chrome */
+{
+    0%   {transform:rotate(0deg)}
+    100% {transform:rotate(360deg)}
+}
+@-webkit-keyframes mymove2 /* Safari and Chrome */
+{
+    0%   {transform:rotate(0deg)}
+    100% {transform:rotate(-360deg)}
+}
+@-webkit-keyframes mymove3 /* Safari and Chrome */
+{
+    from{transform:rotate(0deg)}
+    to{transform:rotate(360deg)}
+}
+
+.img4{ position:absolute;
+    top:42%;
+    left:46%;
+    height: 60px;
+    width: 60px;
+    -webkit-animation:mymove3 4s linear infinite;}
+.earth{
+    position:fixed;
+    left: 100px;
+    top: 0;
+    width: 100%;
+    height: 90%;
+    }
+
+.area{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+.time{
+    position: fixed;
+    width: 50px;
+    text-align: right;
+    border-radius:5px;
+    padding-right: 10px;
+    z-index: 100;
+    visibility: hidden;
+}
+.p1{
+    color: #ffffff;
+    font-weight: bold;
+    font-family: "Adobe 黑体 Std R";
+    line-height: 40px;
+}
+.p2{
+    color: #ffffff;
+    font-weight: bold;
+    font-family: "Adobe 黑体 Std R";
+    visibility: hidden;
+}
+.button2{
+    position: relative;
+    z-index: 200;
+}
+.divB{
+    position: fixed;
+    right: 0;
+    top:0;
+}
+#gameOver{
+    margin: 0;
+    padding: 0;
+    position:fixed;
+    left:40%;
+    top:30%;
+    width: 20%;
+    background: url(../image/earthboom.jpg) no-repeat;
+    background-size: cover;
+    visibility: hidden;
+    border: 4px solid #c3c3c3;
+    text-align: center;
+    border-radius:2px;
+
+}
+#second{
+    font-family: "Adobe 黑体 Std R";
+    font-size: 30px;
+    color: #FFFF00;
+}
+#black{
+    background-color:black;
+    opacity: 0.7;
+    padding-bottom: 20px;
+}
+#logo{
+    width: 80px;
+    height: 80px;
+}
+.li{
+    display: block;
+    font-size: 15px;
+    padding:10px;
+    margin: 1px;
+    transition: background,color,font-size 1s;
+    border-radius:3px;
+    color: white;
+    text-decoration:none;
+}
+.li:hover{
+    background: #c3c3c3;
+    color: #ce0000;
+    font-size: 17px;
+}
+
+.li2{
+    display: block;
+    font-size: 15px;
+    padding:10px;
+    margin: 1px;
+    transition: background,color,font-size 1s;
+    border-radius:3px;
+    text-decoration:none;
+    color: white;
+
+}
+.li2:hover{
+    background: #c3c3c3;
+    color: black;
+    font-size:15px;
+}
+.li3{
+    display: block;
+    font-size: 15px;
+    padding:10px;
+    margin: 1px;
+    transition: background,color,font-size 0.5s;
+    border-radius:3px;
+    text-decoration:none;
+    color: white;
+}
+.li3:hover{
+    background: #c3c3c3;
+    color: #005ab5;
+    font-size:17px;
+}
+.menuMent{
+    margin: 0;
+    position: absolute;
+    right:10%;
+    top:350px;
+    width: 300px;
+    height: 80px;
+    padding: 5px;
+    background: black;
+    opacity: 0.7;
+    border-radius: 5px;
+    border-right: 2px solid #2d2d2d;
+    visibility: hidden;
+    overflow: hidden;
+    animation:appearmenu 1s linear;
+}
+@keyframes appearmenu {
+    0%{width: 0%;}
+    50%{width: 5%;}
+    100%{width: 10%;}
+}
+
+
+#eto img{
+    width: 80px;
+    float: left;
+}
+.menutip{
+    color: #c3c3c3;
+    font-size: 15px;
+    padding-top: 10px
+}

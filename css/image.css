@@ -1,0 +1,459 @@
+@charset "UTF-8";
+/********************* FONTES ******************* */
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css");
+/********************* GERAL ******************* */
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #eee;
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-track-piece {
+    opacity: 1;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    background-color: #bbb;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: -webkit-linear-gradient(353deg, #c0e6dc, #b4dcf7, #ecd8ff, #ffedd8);
+    background: linear-gradient(97deg, #c0e6dc, #b4dcf7, #ecd8ff, #ffedd8);
+    background-size: 800% 800%;
+    -webkit-animation: gradienteBG 30s ease infinite;
+    animation: gradienteBG 30s ease infinite;
+}
+
+@-webkit-keyframes gradienteBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes gradienteBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+* a {
+    outline: none !important;
+}
+
+/********************* PRELOADER ******************* */
+.preloader {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #fff;
+    z-index: 98;
+}
+.preloader i {
+    position: absolute;
+    color: #C4151C;
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+    top: calc(50% - 20px);
+    right: calc(50% - 34px);
+}
+.preloader::before {
+    content: "";
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    z-index: 999999;
+    top: calc(50% - 50px);
+    right: calc(50% - 50px);
+    z-index: 99;
+    border: 4px solid #fff;
+    border-right: 4px solid #C4151C;
+    border-left: 4px solid #C4151C;
+    border-radius: 100%;
+    -webkit-animation-name: rodar;
+    animation-name: rodar;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    animation-direction: normal;
+    -webkit-animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes rodar {
+    0%, 100% {
+        -webkit-transform: rotate(0deg) scale(1);
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        -webkit-transform: rotate(360deg) scale(1.2);
+        transform: rotate(360deg) scale(1.2);
+    }
+}
+
+@keyframes rodar {
+    0%, 100% {
+        -webkit-transform: rotate(0deg) scale(1);
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        -webkit-transform: rotate(360deg) scale(1.2);
+        transform: rotate(360deg) scale(1.2);
+    }
+}
+/********************* BOTÃO CODEPEN ******************* */
+.botao-codepen {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    border-radius: 50%;
+    -webkit-animation-name: pular;
+    animation-name: pular;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    animation-direction: normal;
+    -webkit-animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+.botao-codepen i {
+    color: #fff;
+    line-height: 50px;
+    font-size: 23px;
+}
+
+@-webkit-keyframes pular {
+    0%, 100% {
+        -webkit-transform: translateY(0px) scale(1) rotateY(0deg);
+        transform: translateY(0px) scale(1) rotateY(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) scale(0.8) rotateY(180deg);
+        transform: translateY(-9px) scale(0.8) rotateY(180deg);
+    }
+}
+
+@keyframes pular {
+    0%, 100% {
+        -webkit-transform: translateY(0px) scale(1) rotateY(0deg);
+        transform: translateY(0px) scale(1) rotateY(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) scale(0.8) rotateY(180deg);
+        transform: translateY(-9px) scale(0.8) rotateY(180deg);
+    }
+}
+/******************** FIX MARGIN ********************* */
+.magnificPopup__Box {
+    margin-top: 30px;
+}
+
+/****************** BOX 1,2,3,4 *********************** */
+.box-1, .box-2, .box-3, .box-4 {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-transition: 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.box-1::before, .box-2::before, .box-3::before, .box-4::before {
+    content: "";
+    position: absolute;
+    top: 5%;
+    left: 3.75%;
+    width: 92.5%;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-transition: 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.box-1:hover, .box-2:hover, .box-3:hover, .box-4:hover {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.2);
+}
+
+.box-1::before {
+    opacity: 0;
+    -webkit-transform: scale(0.4);
+    transform: scale(0.4);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+}
+
+.box-2::before {
+    opacity: 0;
+}
+
+.box-3::before {
+    opacity: 0;
+    -webkit-transform: translateY(-10px) translateX(-10px);
+    transform: translateY(-10px) translateX(-10px);
+}
+
+.box-4::before {
+    opacity: 0;
+    width: 0;
+}
+
+.box-1:hover::before {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.box-2:hover::before {
+    opacity: 1;
+}
+
+.box-3:hover::before {
+    opacity: 1;
+    -webkit-transform: translateY(0px) translateX(0px);
+    transform: translateY(0px) translateX(0px);
+}
+
+.box-4:hover::before {
+    opacity: 1;
+    width: 92.5%;
+}
+
+.box-1::after, .box-2::after, .box-3::after, .box-4::after {
+    content: "";
+    position: absolute;
+    top: 5%;
+    left: 2.5%;
+    width: 95%;
+    height: 90%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0 30px 0 30px;
+    opacity: 0;
+    -webkit-transition: 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+}
+
+.box-1:hover::after, .box-2:hover::after, .box-3:hover::after, .box-4:hover::after {
+    opacity: 1;
+}
+
+/****************** LUPA OVERLAY *********************** */
+.lupa {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: calc(50% - 28px);
+    left: calc(50% - 32px);
+    opacity: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-radius: 8px;
+    -webkit-transition: 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.lupa > i {
+    font-size: 23px;
+    line-height: 45px;
+    color: rgba(255, 255, 255, 0.8);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.box-1:hover .lupa, .box-2:hover .lupa, .box-3:hover .lupa, .box-4:hover .lupa {
+    opacity: 1;
+}
+
+/*************** FIX CURSOR MAGNIFIC POPUP *********** */
+.mfp-close {
+    cursor: pointer !important;
+}
+
+.mfp-bg, .mfp-container, .mfp-wrap {
+    cursor: default !important;
+}
+
+/************* MAGNIFIC POPUP ZOOM ************** */
+.mfp-zoom-in {
+    /* start state */
+    /* animate in */
+    /* animate out */
+}
+.mfp-zoom-in .magnificPopup__Animus {
+    opacity: 0;
+    -webkit-transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+}
+.mfp-zoom-in.mfp-bg {
+    opacity: 0;
+    -webkit-transition: 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.mfp-zoom-in.mfp-ready .magnificPopup__Animus {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.mfp-zoom-in.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+.mfp-zoom-in.mfp-removing .magnificPopup__Animus {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 0;
+}
+.mfp-zoom-in.mfp-removing.mfp-bg {
+    opacity: 0;
+}
+
+/**************************************************** */
+/************* MAGNIFIC 3D FLIP ************** */
+.mfp-3d-flip {
+    /* start state */
+    /* animate in */
+    /* animate out */
+}
+.mfp-3d-flip .mfp-content {
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+}
+.mfp-3d-flip .magnificPopup__Animus {
+    opacity: 0;
+    -webkit-transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: rotateY(-60deg);
+    transform: rotateY(-60deg);
+}
+.mfp-3d-flip.mfp-bg {
+    opacity: 0;
+    -webkit-transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.mfp-3d-flip.mfp-ready .magnificPopup__Animus {
+    opacity: 1;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+.mfp-3d-flip.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+.mfp-3d-flip.mfp-removing .magnificPopup__Animus {
+    -webkit-transform: rotateX(80deg);
+    transform: rotateX(80deg);
+    opacity: 0;
+}
+.mfp-3d-flip.mfp-removing.mfp-bg {
+    opacity: 0;
+}
+
+/*************************************************** */
+/**************** MAGNIFIC HORIZONTAL IN OUT **************** */
+.mfp-horizontal-in-out {
+    /* start state */
+    /* animate in */
+    /* animate out */
+}
+.mfp-horizontal-in-out .magnificPopup__Animus {
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-transform: translateX(-500px);
+    transform: translateX(-500px);
+}
+.mfp-horizontal-in-out.mfp-bg {
+    opacity: 0;
+    -webkit-transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.mfp-horizontal-in-out.mfp-ready .magnificPopup__Animus {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+.mfp-horizontal-in-out.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+.mfp-horizontal-in-out.mfp-removing .magnificPopup__Animus {
+    -webkit-transform: translateX(500px);
+    transform: translateX(500px);
+    opacity: 0;
+}
+.mfp-horizontal-in-out.mfp-removing.mfp-bg {
+    opacity: 0;
+}
+
+/********************************************************************* */
+/************************ MAGNIFIC VERTICAL TOP IN - BOTTOM OUT ************************* */
+.mfp-vertical-topIn-bottomOut {
+    /* start state */
+    /* animate in */
+    /* animate out */
+}
+.mfp-vertical-topIn-bottomOut .mfp-content {
+    vertical-align: middle;
+}
+.mfp-vertical-topIn-bottomOut .magnificPopup__Animus {
+    opacity: 0;
+    -webkit-transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -webkit-transform: translateY(-400px);
+    transform: translateY(-400px);
+}
+.mfp-vertical-topIn-bottomOut.mfp-bg {
+    opacity: 0;
+    -webkit-transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.mfp-vertical-topIn-bottomOut.mfp-ready .magnificPopup__Animus {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+.mfp-vertical-topIn-bottomOut.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+.mfp-vertical-topIn-bottomOut.mfp-removing .magnificPopup__Animus {
+    -webkit-transform: translateY(200px);
+    transform: translateY(200px);
+    opacity: 0;
+}
+.mfp-vertical-topIn-bottomOut.mfp-removing.mfp-bg {
+    opacity: 0;
+}
+
+/************************************************************************************** */
